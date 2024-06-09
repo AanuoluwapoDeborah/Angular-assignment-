@@ -1,0 +1,67 @@
+{
+    "Allproducts": [
+        {
+            "id": 1,
+            "name": "Classic Spring",
+            "price": 120,
+            "category": "Men's Latest",
+            "image": "assets/images/men-01.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Air Force 1X",
+            "price": 90,
+            "category": "Men's Latest",
+            "image": "assets/images/men-02.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Love Nana '20",
+            "price": 150,
+            "category": "Men's Latest",
+            "image": "assets/images/men-03.jpg"
+        },
+        {
+            "id": 4,
+            "name": "New Green Jacket",
+            "price": 75,
+            "category": "Women's Latest",
+            "image": "assets/images/women-01.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Classic Dress",
+            "price": 45,
+            "category": "Women's Latest",
+            "image": "assets/images/women-02.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Spring Collection",
+            "price": 130,
+            "category": "Women's Latest",
+            "image": "assets/images/women-03.jpg"
+        },
+        {
+            "id": 7,
+            "name": "School Collection",
+            "price": 80,
+            "category": "Kid's Latest",
+            "image": "assets/images/kid-01.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Summer Cap",
+            "price": 12,
+            "category": "Kid's Latest",
+            "image": "assets/images/kid-02.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Classic Kid",
+            "price": 30,
+            "category": "Kid's Latest",
+            "image": "assets/images/kid-03.jpg"
+        }
+    ]
+}

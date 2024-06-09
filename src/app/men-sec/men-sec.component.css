@@ -1,0 +1,23 @@
+#parentDiv{
+    padding: 0 75px;
+    border-bottom: 3px dotted #eee;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+h2{
+    font-weight: bold;
+    font-size: 36px;
+}
+i{
+    color: #A1A1A1;
+    font-size: 15px;
+}
+h4{
+    font-weight: bold;
+    font-size: 23px;
+}
+p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #A1A1A1;
+}

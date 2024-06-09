@@ -1,0 +1,16 @@
+<div id="parentDiv">
+    <h2 class="m-0">Women's Latest</h2>
+    <i>Details to details is what makes Hexashop different from the other themes.</i>
+    <div class="d-flex gap-4 mt-5">
+        <div *ngFor="let i of productList">
+            <div>
+                <img [src]="i.image" alt="">
+                <div class="d-flex align-items-center justify-content-between mt-4">
+                    <h4>{{i.name}}</h4>
+                    <img class="w-25" src="assets/images/Screenshot 2024-05-27 092023.png" alt="">
+                </div>
+                <p>${{i.price}}.00</p>
+            </div>
+        </div>
+    </div>
+</div>

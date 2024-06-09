@@ -1,0 +1,28 @@
+nav{
+    position: sticky;
+    top: 0;
+    padding: 0;
+}
+#navDiv{
+    padding: 15px 75px;
+    border-bottom: 3px dotted #eee;
+    background-color: white;
+}
+/* .active{
+    color: #aaa !important;
+} */
+li{
+    padding: 0 5px;
+}
+a{
+    color: black !important;
+    font-weight: 600;
+    font-size: 16px;
+}
+a:hover{
+    color: #aaa !important;
+}
+/* .activeRoute{
+    font-weight: 600;
+    color: #AAAAAA !important;
+} */

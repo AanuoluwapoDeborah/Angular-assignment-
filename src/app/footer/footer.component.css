@@ -1,0 +1,30 @@
+#parentDiv{
+    padding: 60px 75px;
+    /* padding-top: 90px;
+    padding-bottom: 60px; */
+    background-color: #2A2A2A;
+    color: white;
+    cursor: default;
+}
+p{
+    font-weight: bold;
+    font-size: 17px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+a:hover{
+    color: #AAAAAA;
+}
+span{
+    font-size: 15px;
+}
+span a{
+    color: #C7F5F8;
+    font-size: 15px;
+}
+span a:hover{
+    color: #CC6666;
+}
