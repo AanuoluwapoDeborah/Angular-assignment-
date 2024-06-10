@@ -9,5 +9,7 @@ import { SubscribtionSecComponent } from './subscribtion-sec/subscribtion-sec.co
 import { FooterComponent } from './footer/footer.component';
 
 export const routes: Routes = [
+    {path: "", redirectTo: "/first_sec", pathMatch: 'full'},
     {path: "first_sec", component: FirstSecComponent},
+    {path: "men_sec", component: MenSecComponent},
 ];

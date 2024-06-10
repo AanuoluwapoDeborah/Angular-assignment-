@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductsService } from './products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.module';
 
 import { FirstSecComponent } from './first-sec/first-sec.component';
 import { MenSecComponent } from './men-sec/men-sec.component';
@@ -16,19 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet, 
-    NavbarComponent,
-    HttpClientModule,
-    FirstSecComponent, 
-    MenSecComponent, 
-    WomenSecComponent, 
-    KidsSecComponent, 
-    ExploreSecComponent, 
-    SocialMediaSecComponent, 
-    SubscribtionSecComponent, 
-    FooterComponent
-  ],
+  imports: [RouterOutlet, NavbarComponent, HttpClientModule, AppRoutingModule, FirstSecComponent, MenSecComponent, WomenSecComponent, KidsSecComponent, ExploreSecComponent, SocialMediaSecComponent, SubscribtionSecComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [ProductsService]

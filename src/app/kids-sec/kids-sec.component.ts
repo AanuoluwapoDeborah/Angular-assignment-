@@ -1,32 +1,40 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsService } from '../products.service';
 
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+};
 @Component({
   selector: 'app-kids-sec',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './kids-sec.component.html',
   styleUrl: './kids-sec.component.css'
 })
 export class KidsSecComponent {
-  productList = [
-    {
-      id: 1,
-      image: "assets/images/kid-01.jpg",
-      name: "School Collection",
-      price: 80
+  Products: Product[] = [];
+  category: string = "Kid's Latest";
+
+  constructor(private allProducts: ProductsService, private http: HttpClient){}
+
+  ngOnInit(): void {
+    this.http.get('http://localhost:2500/Allproducts')
+    .subscribe((data: any)=>{
+      console.log('Local Server Data : ', data);
+      this.Products = data.filter((product: Product) => product.category === this.category);
+      this.allProducts.storedProducts(this.Products);
+      console.log("Products After Initialization : ", this.Products)
     },
-    {
-      id: 2,
-      image: "assets/images/kid-02.jpg",
-      name: "Summer Cap",
-      price: 12
-    },
-    {
-      id: 3,
-      image: "assets/images/kid-03.jpg",
-      name: "Classic Kid",
-      price: 30
-    }
-  ]
+      (error) => {
+        console.error('Error: ', error);
+      }
+    );
+  }
 }

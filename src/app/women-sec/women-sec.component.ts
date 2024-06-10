@@ -1,32 +1,41 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../products.service';
 
+
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+};
 @Component({
   selector: 'app-women-sec',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './women-sec.component.html',
   styleUrl: './women-sec.component.css'
 })
 export class WomenSecComponent {
-  productList = [
-    {
-      id: 1,
-      image: "assets/images/women-01.jpg",
-      name: "New Green Jacket",
-      price: 75
+  Products: Product[] = [];
+  category: string = "Women's Latest";
+
+  constructor(private allProducts: ProductsService, private http: HttpClient){}
+
+  ngOnInit(): void {
+    this.http.get('http://localhost:2500/Allproducts')
+    .subscribe((data: any)=>{
+      console.log('Local Server Data : ', data);
+      this.Products = data.filter((product: Product) => product.category === this.category);
+      this.allProducts.storedProducts(this.Products);
+      console.log("Products After Initialization : ", this.Products)
     },
-    {
-      id: 2,
-      image: "assets/images/women-02.jpg",
-      name: "Classic Dress",
-      price: 45
-    },
-    {
-      id: 3,
-      image: "assets/images/women-03.jpg",
-      name: "Spring Collection",
-      price: 130
-    }
-  ]
+      (error) => {
+        console.error('Error: ', error);
+      }
+    );
+  }
 }
