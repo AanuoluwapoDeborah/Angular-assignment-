@@ -1,0 +1,32 @@
+#single{
+    padding: 70px;
+    border-bottom: 3px dotted #eee;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+i{
+    font-size: 15px;
+    font-weight: 600;
+}
+h4{
+    font-weight: bold;
+    font-size: 23px;
+}
+span{
+    color: #A1A1A1;
+    font-size: 18px;
+    font-weight: 500;
+}
+p{
+    font-weight: 500;
+    font-size: 16px;
+    color: #A1A1A1;
+}
+h3{
+    font-weight: bold;
+    font-size: 23px;
+    color: #A1A1A1;
+}
+#total button{
+    font-size: 14px;
+}
